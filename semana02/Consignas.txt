@@ -1,0 +1,33 @@
+Semana 2: Estructuras de datos y control de flujo
+
+Práctica obligatoria
+
+Crear una lista de 10 productos con precios.
+
+Calcular el producto más caro, más barato y el promedio.
+
+Contar la frecuencia de palabras en un texto.
+
+Eliminar duplicados de una lista manteniendo el orden.
+
+Crear un diccionario de estudiantes con notas y calcular promedios.
+
+Filtrar productos con precio mayor a un valor dado usando comprensión de listas.
+
+Simular un carrito de compras con alta, baja y total.
+
+Proyecto de la semana: Analizador de ventas sin pandas
+
+Consigna: Dada una lista de ventas con producto, cantidad y precio:
+
+Calcular facturación total.
+
+Identificar el producto más vendido por cantidad.
+
+Identificar el producto con mayor facturación.
+
+Calcular ticket promedio.
+
+Agrupar ventas por categoría.
+
+Exportar el resumen a un archivo de texto o JSON.
