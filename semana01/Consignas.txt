@@ -1,0 +1,31 @@
+Fase 1 — Fundamentos de Python
+
+Semana 1: Introducción a Python
+
+Práctica obligatoria
+
+Crear un programa que pida nombre, edad y ciudad, y muestre un mensaje personalizado.
+
+Crear una calculadora básica con las cuatro operaciones.
+
+Validar si un número es par o impar.
+
+Determinar si una persona es menor, adulta o adulta mayor según su edad.
+
+Convertir temperaturas entre Celsius y Fahrenheit.
+
+Crear un validador de contraseñas simple: longitud mínima, presencia de número y mayúscula.
+
+Proyecto de la semana: Calculadora de gastos personales
+
+Requisitos:
+
+Pedir al usuario ingresos y gastos.
+
+Calcular total de gastos, balance y porcentaje de ahorro.
+
+Clasificar el resultado: ahorro, equilibrio o déficit.
+
+Validar entradas incorrectas.
+
+Mostrar un resumen final claro.
