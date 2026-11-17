@@ -37,7 +37,7 @@ else:
 total_gastos = gasto_comida + gasto_hogar + gasto_transporte
 print(f"Su gasto total es de {total_gastos} $")
 
-balance = ingresos - total_gastos
+balance = round(ingresos - total_gastos,2)
 if balance > 0:
     print("Felicidades estas ahorrando")  
 elif balance == 0:
