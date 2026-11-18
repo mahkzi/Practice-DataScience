@@ -45,6 +45,147 @@
 
 # Filtrar productos con precio mayor a un valor dado usando comprensión de listas.
 
-productos = [300, 100, 200, 175, 250, 500, 435, 390, 450, 23]
-productos_filtrados = [p for p in productos if p > 200]
-print(productos_filtrados)
+# productos = [300, 100, 200, 175, 250, 500, 435, 390, 450, 23]
+# productos_filtrados = [p for p in productos if p > 200]
+# print(productos_filtrados)
+
+#Simular un carrito de compras con alta, baja y total.
+
+
+carrito = []
+
+catalogo = [
+    ["Remera", 50],
+    ["Pantalon", 70],
+    ["Buzo", 100],
+    ["Medias", 30],
+    ["Gorra", 40]
+]
+
+salir = False
+
+while not salir:
+
+    print("\n===== CARRITO DE COMPRAS =====")
+    print("1. Agregar producto (ALTA)")
+    print("2. Eliminar producto (BAJA)")
+    print("3. Mostrar carrito")
+    print("4. Calcular total")
+    print("5. Salir")
+
+    try:
+        opcion = int(input("\nSeleccione una opción: "))
+
+        # ALTA
+        if opcion == 1:
+
+            print("\n===== CATÁLOGO =====")
+
+            for item in catalogo:
+                print(f"{item[0]} - ${item[1]}")
+
+            producto = input("\nIngrese el producto: ").capitalize()
+
+            producto_encontrado = False
+
+            for item in catalogo:
+
+                if producto == item[0]:
+
+                    producto_encontrado = True
+
+                    try:
+                        cantidad = int(input("Ingrese la cantidad: "))
+
+                        if cantidad > 0:
+
+                            carrito.append([item[0], item[1], cantidad])
+
+                            print("Producto agregado correctamente")
+
+                        else:
+                            print("Ingrese una cantidad mayor a 0")
+
+                    except ValueError:
+                        print("Debe ingresar una cantidad válida")
+
+                    break
+
+            if not producto_encontrado:
+                print("Ese producto no existe")
+
+        # BAJA
+        elif opcion == 2:
+
+            if len(carrito) == 0:
+                print("\nEl carrito está vacío")
+
+            else:
+
+                print("\n===== MI CARRITO =====")
+
+                for item in carrito:
+                    print(f"{item[0]} - ${item[1]} - Cantidad: {item[2]}")
+
+                producto = input("\nIngrese el producto que desea eliminar: ").capitalize()
+
+                producto_eliminado = False
+
+                for item in carrito:
+
+                    if producto == item[0]:
+
+                        carrito.remove(item)
+                        producto_eliminado = True
+
+                        print("Producto eliminado correctamente")
+                        break
+
+                if not producto_eliminado:
+                    print("El producto no se encuentra en el carrito")
+
+        # MOSTRAR CARRITO
+        elif opcion == 3:
+
+            print("\n===== MI CARRITO =====")
+
+            if len(carrito) == 0:
+                print("El carrito está vacío")
+
+            else:
+
+                for item in carrito:
+                    subtotal = item[1] * item[2]
+
+                    print(f"""
+Producto: {item[0]}
+Precio unitario: ${item[1]}
+Cantidad: {item[2]}
+Subtotal: ${subtotal}
+""")
+
+        # TOTAL
+        elif opcion == 4:
+
+            total = 0
+
+            for item in carrito:
+
+                subtotal = item[1] * item[2]
+                total += subtotal
+
+            print(f"\nEl total de la compra es: ${total}")
+
+        # SALIR
+        elif opcion == 5:
+
+            salir = True
+            print("\nGracias por su compra")
+
+        else:
+            print("Opción inválida")
+
+    except ValueError:
+        print("Ingrese una opción numérica válida")
+
+    
